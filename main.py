@@ -2,11 +2,6 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 import time
 
-
-def get_verification_code():
-    return input("Enter the verification code: ")
-
-
 def main():
     # Set up the headless browser
     options = webdriver.ChromeOptions()
@@ -29,7 +24,7 @@ def main():
         time.sleep(5)
 
         # Ask the user for the verification code
-        verification_code = get_verification_code()
+        verification_code = input("Enter the verification code: ")
 
         # Fill out the verification code field (assuming the field name is 'verification_code')
         verification_code_field = driver.find_element(By.XPATH,
